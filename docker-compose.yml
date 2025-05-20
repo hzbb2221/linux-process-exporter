@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  process-exporter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "2112:2112"
+    restart: unless-stopped
+    pid: host
+    privileged: true
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro

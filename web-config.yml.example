@@ -1,0 +1,8 @@
+# TLS配置
+tls_server_config:
+  cert_file: server.crt
+  key_file: server.key
+
+# 基本认证配置
+basic_auth_users:
+  admin: $2y$10$kHSXPKX.SqaDe3zJ7HN5h.SqaDe3zJ7HN5h # 密码为admin
