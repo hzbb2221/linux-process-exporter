@@ -33,7 +33,7 @@ var (
 	showVersion      = flag.Bool("version", false, "Show version information")
 	showHelp         = flag.Bool("help", false, "Show help information")
 	webConfigFile    = flag.String("web.config.file", "", "Path to configuration file for TLS and basic auth settings")
-	webListenAddress = flag.String("web.listen-address", ":2112", "Address to listen on for web interface and telemetry")
+	webListenAddress = flag.String("web.listen-address", ":9113", "Address to listen on for web interface and telemetry")
 )
 
 type ProcessCollector struct {

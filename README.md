@@ -65,7 +65,7 @@ docker run -d \
 - `--version`: 显示版本信息
 - `--help`: 显示帮助信息
 - `--web.config.file`: TLS和基本认证配置文件路径
-- `--web.listen-address`: Web服务监听地址（默认：:2112）
+- `--web.listen-address`: Web服务监听地址（默认：:9113）
 
 ### TLS和认证配置
 
@@ -99,7 +99,7 @@ basic_auth_users:
 scrape_configs:
   - job_name: 'process-exporter'
     static_configs:
-      - targets: ['localhost:2112']
+      - targets: ['localhost:9113']
     # 如果启用了基本认证，添加以下配置
     basic_auth:
       username: admin
@@ -107,6 +107,7 @@ scrape_configs:
     # 如果启用了TLS，添加以下配置
     scheme: https
     tls_config:
+      # 跳过tls安全验证
       insecure_skip_verify: true
 ```
 

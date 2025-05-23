@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "2112:2112"
+      - "9113:9113"
     restart: unless-stopped
     pid: host
     privileged: true

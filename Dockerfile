@@ -27,7 +27,7 @@ WORKDIR /app
 COPY --from=builder /app/linux-process-exporter .
 
 # Expose metrics port
-EXPOSE 2112
+EXPOSE 9113
 
 # Run the application
 CMD ["./linux-process-exporter"]
