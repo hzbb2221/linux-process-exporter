@@ -4,8 +4,6 @@
 
 这是一个用Go语言编写的Prometheus exporter，用于收集Linux系统中所有进程的信息，包括PID、进程名称、CPU使用率和内存使用率，作为对Node_Exporter的补充。
 
-项目地址：[https://github.com/hzbb2221/linux-process-exporter.git](https://github.com/hzbb2221/linux-process-exporter.git)
-
 ## 功能特点
 
 - 收集所有进程的基本信息（PID和进程名称）
