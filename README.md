@@ -1,6 +1,8 @@
 # Linux Process Exporter
 
-这是一个用Go语言编写的Prometheus exporter，用于收集Linux系统中所有进程的信息，包括PID、进程名称、CPU使用率和内存使用率。
+这是一个用Go语言编写的Prometheus exporter，用于收集Linux系统中所有进程的信息，包括PID、进程名称、CPU使用率和内存使用率，作为对Node_Exporter的补充。
+
+项目地址：[https://github.com/hzbb2221/linux-process-exporter.git](https://github.com/hzbb2221/linux-process-exporter.git)
 
 ## 功能特点
 
@@ -131,10 +133,11 @@ process_memory_usage{name="nginx"}
 ## Grafana展示示例
 
 * 进程资源使用情况展示
+  * `sum by (pid,name) (process_cpu_usage)`
+  * `sum by (pid,name) (process_memory_usage)`
 
-![image-20250518160905004](https://lsky-img.hzbb.top/EAFluSPqdFTVhvgii4ENaXGjGntQVKdn/2025/05/18/682995a60d15b.png)
+![image-20250518160905004](https://lsky-img.hzbb.top/EAFluSPqdFTVhvgii4ENaXGjGntQVKdn/2025/05/20/682c1fb16b80d.png)
 
 * 数据关联及标签名称配置
 
-![image-20250518161052206](https://lsky-img.hzbb.top/EAFluSPqdFTVhvgii4ENaXGjGntQVKdn/2025/05/18/6829960e4dab7.png)
-
+![image-20250523100925902](https://lsky-img.hzbb.top/EAFluSPqdFTVhvgii4ENaXGjGntQVKdn/2025/05/23/682fd8ecdef2c.png)
