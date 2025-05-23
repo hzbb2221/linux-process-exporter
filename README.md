@@ -52,7 +52,7 @@ docker run -d \
   --privileged \
   -v /proc:/host/proc:ro \
   -v /sys:/host/sys:ro \
-  -p 2112:2112 \
+  -p 9113:9113 \
   linux-process-exporter
 ```
 
